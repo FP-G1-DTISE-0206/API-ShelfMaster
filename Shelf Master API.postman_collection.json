@@ -1,0 +1,855 @@
+{
+	"info": {
+		"_postman_id": "946c6c02-517f-47aa-8108-d30076a6b6ab",
+		"name": "Shelf Master API Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39220872"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"admin@admin.com\",\r\n    \"password\":\"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh Token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0M0BlbWFpbC5jb20iLCJleHAiOjE3Mzc2MDIzMTAsInR5cGUiOiJSRUZSRVNIIiwiaWF0IjoxNzM3NTE1OTEwLCJ1c2VySWQiOjQsInNjb3BlIjoiVVNFUiJ9.PcZ9lPMMIlLgP641GFTLV4luLeN7KuZ0OcB-49w1nQM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/auth/refresh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0M0BlbWFpbC5jb20iLCJleHAiOjE3Mzc1MTY4MzUsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3Mzc1MTU5MzUsInVzZXJJZCI6IjQiLCJzY29wZSI6IlVTRVIifQ.m9h3_23JxwRcMjzLY-IEEOtLp0utKSssdcgnfxQC31U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"accessToken\": \"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0M0BlbWFpbC5jb20iLCJleHAiOjE3Mzc1MTY4MzUsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3Mzc1MTU5MzUsInVzZXJJZCI6IjQiLCJzY29wZSI6IlVTRVIifQ.m9h3_23JxwRcMjzLY-IEEOtLp0utKSssdcgnfxQC31U\",\r\n        \"refreshToken\": \"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0M0BlbWFpbC5jb20iLCJleHAiOjE3Mzc2MDIzMTAsInR5cGUiOiJSRUZSRVNIIiwiaWF0IjoxNzM3NTE1OTEwLCJ1c2VySWQiOjQsInNjb3BlIjoiVVNFUiJ9.PcZ9lPMMIlLgP641GFTLV4luLeN7KuZ0OcB-49w1nQM\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/auth/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"test2\",\r\n    \"email\":\"test2@email.com\",\r\n    \"password\":\"test2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0M0BlbWFpbC5jb20iLCJleHAiOjE3Mzc1Mjc1MTEsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3Mzc1MjY2MTEsInVzZXJJZCI6NCwic2NvcGUiOiJVU0VSIn0.ImU_ZkQqA01vry4Js1ebQV83RxvTF374w6ddttXyi1I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\":\"test55\",\r\n    \"newPassword\":\"test3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/auth/change_password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"change_password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Warehouse Admin",
+			"item": [
+				{
+					"name": "Register WH Admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3Mzg1NjE2MTksInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3Mzg1NjA3MTksInVzZXJJZCI6MX0.me8c7JiDYdkmpwsNmcIzeuZl82NpYHFf0PlHXTX3yBA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"test51\",\r\n    \"email\":\"test51@email.com\",\r\n    \"password\":\"test51\",\r\n    \"warehouseId\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All WH Admin",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3Mzg1NjA4MzAsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3Mzg1NTk5MzAsInVzZXJJZCI6MX0.nIzqLsZmSQwtqHJFXp28QnYkYLaV3sRGweRpn8EFEJA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/admin?start=0&length=10&search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"admin"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "0"
+								},
+								{
+									"key": "length",
+									"value": "10"
+								},
+								{
+									"key": "search",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/admin/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Warehouse",
+			"item": [
+				{
+					"name": "Get All Warehouse",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3Mzg1NTgwMTUsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3Mzg1NTcxMTUsInVzZXJJZCI6MX0.JuYeAwAzpl9bJ6Smtch6RFiXMahd6tJjBJ_sabrUEHs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/warehouse?start=0&length=10&search=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"warehouse"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "0"
+								},
+								{
+									"key": "length",
+									"value": "10"
+								},
+								{
+									"key": "search",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Warehouse",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3Mzg1NTg5NTMsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3Mzg1NTgwNTMsInVzZXJJZCI6MX0.8i26xJBuh_7f4JxbbCcRamvcT4DJaC2IgZH2CvZn7VI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Tokokelontonggg\",\r\n    \"location\": \"jkt\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/warehouse",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"warehouse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Warehouse",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3Mzg1NTg3MzQsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3Mzg1NTc4MzQsInVzZXJJZCI6MX0.HtyFpoq66z4v187BPRMCbyKQ4qTtbc4zzEBLsRfFnRE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"TokoOhak\",\r\n    \"location\": \"jkt\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/warehouse/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"warehouse",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Warehouse",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3Mzg1NTgwMTUsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3Mzg1NTcxMTUsInVzZXJJZCI6MX0.JuYeAwAzpl9bJ6Smtch6RFiXMahd6tJjBJ_sabrUEHs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/warehouse/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"warehouse",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product Management",
+			"item": [
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "Create Product",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3Mzc5NDU0NzYsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3Mzc5NDQ1NzYsInVzZXJJZCI6MSwic2NvcGUiOiJTVVBFUl9BRE1JTiJ9.0QGIQvpjL32neksDpvBDvKLi4RJvSJLQPhBvcu6dXD0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"product3\",\r\n    \"price\": 1000,\r\n    \"categories\": [4]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/product",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Product",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3Mzc5NTE0NzgsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3Mzc5NTA1NzgsInVzZXJJZCI6MSwic2NvcGUiOiJTVVBFUl9BRE1JTiJ9.GrrTaz4x-vdgTZg4o5eag_ysjq0YIjeuWNPaIkK-nhQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/product?start=0&length=10&field=id&order=asc&search=",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"product"
+									],
+									"query": [
+										{
+											"key": "start",
+											"value": "0"
+										},
+										{
+											"key": "length",
+											"value": "10"
+										},
+										{
+											"key": "field",
+											"value": "id"
+										},
+										{
+											"key": "order",
+											"value": "asc"
+										},
+										{
+											"key": "search",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Product",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3Mzc5NDU0NzYsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3Mzc5NDQ1NzYsInVzZXJJZCI6MSwic2NvcGUiOiJTVVBFUl9BRE1JTiJ9.0QGIQvpjL32neksDpvBDvKLi4RJvSJLQPhBvcu6dXD0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 7,\r\n    \"name\": \"product3\",\r\n    \"price\": 4000,\r\n    \"categories\": [\r\n        1\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/product/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"product",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "7"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Product",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/product/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"product",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Category",
+					"item": [
+						{
+							"name": "Create Category",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3Mzc5NDU0NzYsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3Mzc5NDQ1NzYsInVzZXJJZCI6MSwic2NvcGUiOiJTVVBFUl9BRE1JTiJ9.0QGIQvpjL32neksDpvBDvKLi4RJvSJLQPhBvcu6dXD0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"category02\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/category",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"category"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Category",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3Mzc3MDA3ODksInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3Mzc2OTk4ODksInVzZXJJZCI6MSwic2NvcGUiOiJTVVBFUl9BRE1JTiJ9.voqbkvnWEd6ihkifZct2AqeZf-rgtlSHZkDzyP70QcY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"id\": 1,\r\n        \"name\": \"category01\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/category/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"category",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Category",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3Mzc5NDU0NzYsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3Mzc5NDQ1NzYsInVzZXJJZCI6MSwic2NvcGUiOiJTVVBFUl9BRE1JTiJ9.0QGIQvpjL32neksDpvBDvKLi4RJvSJLQPhBvcu6dXD0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/category?start=0&length=10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"category"
+									],
+									"query": [
+										{
+											"key": "start",
+											"value": "0"
+										},
+										{
+											"key": "length",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Category",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3Mzc3MDY4MjYsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3Mzc3MDU5MjYsInVzZXJJZCI6MSwic2NvcGUiOiJTVVBFUl9BRE1JTiJ9.2TCWRcrRp_rM0-pci9zr5KBG8p0r6tQd2JiOn1MdEQE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/category/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"category",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
