@@ -432,6 +432,250 @@
 			]
 		},
 		{
+			"name": "User Address",
+			"item": [
+				{
+					"name": "Get Address List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiJodHRwczovL2Nkbi5idWlsZGVyLmlvL2FwaS92MS9pbWFnZS9hc3NldHMlMkYzMGUzNjA0YzllYTI0NzgwOWMwMzUxMWU0YTljNWYzZiUyRmNhOGE1ZGEzY2Q2OTQ2N2E5NDliODlhZDZlN2IwMmRhIiwiZXhwIjoxNzM5MjU1MjQyLCJ0eXBlIjoiQUNDRVNTIiwiaWF0IjoxNzM5MjU0MzQyLCJ1c2VySWQiOjF9.gDBysiLW2Zw7xqyvrfUFuyHtZS3wywOIhYQcnKEFwN0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/user/address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Address",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiJodHRwczovL2Nkbi5idWlsZGVyLmlvL2FwaS92MS9pbWFnZS9hc3NldHMlMkYzMGUzNjA0YzllYTI0NzgwOWMwMzUxMWU0YTljNWYzZiUyRmNhOGE1ZGEzY2Q2OTQ2N2E5NDliODlhZDZlN2IwMmRhIiwiZXhwIjoxNzM5MjY4MTQ0LCJ0eXBlIjoiQUNDRVNTIiwiaWF0IjoxNzM5MjY3MjQ0LCJ1c2VySWQiOjF9.xKLGu87dk35Yws7A2seDtu73fI6Xj2JNrre5o5WGiH4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/user/address/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"address",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Address",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiJodHRwczovL2Nkbi5idWlsZGVyLmlvL2FwaS92MS9pbWFnZS9hc3NldHMlMkYzMGUzNjA0YzllYTI0NzgwOWMwMzUxMWU0YTljNWYzZiUyRmNhOGE1ZGEzY2Q2OTQ2N2E5NDliODlhZDZlN2IwMmRhIiwiZXhwIjoxNzM5MjY1NDIzLCJ0eXBlIjoiQUNDRVNTIiwiaWF0IjoxNzM5MjY0NTIzLCJ1c2VySWQiOjF9.Y3fm9UYQ4oS01WdxP29o5QnkICDRSldh4poRhnUq1CI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"contactName\": \"kuyyyyy\",\r\n    \"contactNumber\": \"123123123123\",\r\n    \"address\": \"asdasd\",\r\n    \"latitude\": \"0123.123123\",\r\n    \"longitude\": \"0321.123321\",\r\n    \"province\": \"Jawa Barat\",\r\n    \"city\": \"Bandung\",\r\n    \"district\": \"Sumur Bandung\",\r\n    \"postalCode\": 40111,\r\n    \"areaId\": \"IDNP9IDNC22IDND2071IDZ40111\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/user/address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Address",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiJodHRwczovL2Nkbi5idWlsZGVyLmlvL2FwaS92MS9pbWFnZS9hc3NldHMlMkYzMGUzNjA0YzllYTI0NzgwOWMwMzUxMWU0YTljNWYzZiUyRmNhOGE1ZGEzY2Q2OTQ2N2E5NDliODlhZDZlN2IwMmRhIiwiZXhwIjoxNzM5MjU2MzcwLCJ0eXBlIjoiQUNDRVNTIiwiaWF0IjoxNzM5MjU1NDcwLCJ1c2VySWQiOjF9.e2DiLn5sm4RJraiNY_e3BfL-MOb8NqKdIxge9skW2CY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"contactName\": \"toloooool\",\r\n    \"contactNumber\": \"123123123123\",\r\n    \"address\": \"asdasd\",\r\n    \"latitude\": \"0123.123123\",\r\n    \"longitude\": \"0321.123321\",\r\n    \"province\": \"Jawa Barat\",\r\n    \"city\": \"Bandung\",\r\n    \"district\": \"Sumur Bandung\",\r\n    \"postalCode\": 40111,\r\n    \"areaId\": \"IDNP9IDNC22IDND2071IDZ40111\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/user/address/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"address",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Default Address",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiJodHRwczovL2Nkbi5idWlsZGVyLmlvL2FwaS92MS9pbWFnZS9hc3NldHMlMkYzMGUzNjA0YzllYTI0NzgwOWMwMzUxMWU0YTljNWYzZiUyRmNhOGE1ZGEzY2Q2OTQ2N2E5NDliODlhZDZlN2IwMmRhIiwiZXhwIjoxNzM5MjU2MzcwLCJ0eXBlIjoiQUNDRVNTIiwiaWF0IjoxNzM5MjU1NDcwLCJ1c2VySWQiOjF9.e2DiLn5sm4RJraiNY_e3BfL-MOb8NqKdIxge9skW2CY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/user/address/:id/set-default",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"address",
+								":id",
+								"set-default"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Address",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiJodHRwczovL2Nkbi5idWlsZGVyLmlvL2FwaS92MS9pbWFnZS9hc3NldHMlMkYzMGUzNjA0YzllYTI0NzgwOWMwMzUxMWU0YTljNWYzZiUyRmNhOGE1ZGEzY2Q2OTQ2N2E5NDliODlhZDZlN2IwMmRhIiwiZXhwIjoxNzM5MjU2MzcwLCJ0eXBlIjoiQUNDRVNTIiwiaWF0IjoxNzM5MjU1NDcwLCJ1c2VySWQiOjF9.e2DiLn5sm4RJraiNY_e3BfL-MOb8NqKdIxge9skW2CY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/user/address/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"address",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Warehouse Admin",
 			"item": [
 				{
