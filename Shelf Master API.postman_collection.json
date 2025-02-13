@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "946c6c02-517f-47aa-8108-d30076a6b6ab",
+		"_postman_id": "c760b657-dca6-4123-9681-802d6d86d5fb",
 		"name": "Shelf Master API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "39220872"
+		"_exporter_id": "37941117"
 	},
 	"item": [
 		{
@@ -1016,7 +1016,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"product3\",\r\n    \"price\": 1000,\r\n    \"categories\": [4]\r\n}",
+									"raw": "{\r\n    \"sku\": \"SOMESKU\",\r\n    \"name\": \"product3\",\r\n    \"description\": \"product description\",\r\n    \"price\": 1000,\r\n    \"weight\": 65,\r\n    \"categories\": [4],\r\n    \"images\": [\"http://url-image\"]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1109,7 +1109,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"id\": 7,\r\n    \"name\": \"product3\",\r\n    \"price\": 4000,\r\n    \"categories\": [\r\n        1\r\n    ]\r\n}",
+									"raw": "{\r\n    \"id\": 7,\r\n    \"sku\": \"SOMESKU\",\r\n    \"name\": \"product3\",\r\n    \"description\": \"product description\",\r\n    \"price\": 2000,\r\n    \"weight\": 65,\r\n    \"categories\": [4],\r\n    \"images\": [\"http://url-image\"]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
