@@ -428,6 +428,59 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Get All User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiJodHRwczovL2Nkbi5idWlsZGVyLmlvL2FwaS92MS9pbWFnZS9hc3NldHMlMkYzMGUzNjA0YzllYTI0NzgwOWMwMzUxMWU0YTljNWYzZiUyRmNhOGE1ZGEzY2Q2OTQ2N2E5NDliODlhZDZlN2IwMmRhIiwiZXhwIjoxNzQwMTExNTk2LCJ0eXBlIjoiQUNDRVNTIiwiaWF0IjoxNzQwMTEwNjk2LCJ1c2VySWQiOjF9.pOHdun1soS-RjJofmHxUEc5rwaysSa_FQBEWsXYPMu8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/admin/users?start=0&length=10&search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"users"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "0"
+								},
+								{
+									"key": "length",
+									"value": "10"
+								},
+								{
+									"key": "search",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -730,7 +783,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiJodHRwczovL2Nkbi5idWlsZGVyLmlvL2FwaS92MS9pbWFnZS9hc3NldHMlMkYzMGUzNjA0YzllYTI0NzgwOWMwMzUxMWU0YTljNWYzZiUyRmNhOGE1ZGEzY2Q2OTQ2N2E5NDliODlhZDZlN2IwMmRhIiwiZXhwIjoxNzM5NzU2MDQyLCJ0eXBlIjoiQUNDRVNTIiwiaWF0IjoxNzM5NzU1MTQyLCJ1c2VySWQiOjF9.pjZL67bmP7g9CvxVbXmqNjYdBdf6B2cZGybFDLqhMxU",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiJodHRwczovL2Nkbi5idWlsZGVyLmlvL2FwaS92MS9pbWFnZS9hc3NldHMlMkYzMGUzNjA0YzllYTI0NzgwOWMwMzUxMWU0YTljNWYzZiUyRmNhOGE1ZGEzY2Q2OTQ2N2E5NDliODlhZDZlN2IwMmRhIiwiZXhwIjoxNzM5OTU1MjU3LCJ0eXBlIjoiQUNDRVNTIiwiaWF0IjoxNzM5OTU0MzU3LCJ1c2VySWQiOjF9.yR1HGVtyrkGsMZgUaJuQebyCYKybpOElGoJZZYt6vpk",
 									"type": "string"
 								}
 							]
