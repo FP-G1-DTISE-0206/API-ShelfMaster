@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "4d1c2a3d-2ded-4ec4-831a-dec65c1c9b15",
+		"_postman_id": "37cab0c1-bb61-4c32-bc44-2444fe889cc7",
 		"name": "Shelf Master API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "39220872"
+		"_exporter_id": "37941117"
 	},
 	"item": [
 		{
@@ -1539,6 +1539,428 @@
 							"response": []
 						}
 					]
+				}
+			]
+		},
+		{
+			"name": "Stock Management",
+			"item": [
+				{
+					"name": "Add Stock",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ3aEBhZG1pbi5jb20iLCJzY29wZSI6IldIX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3Mzk5NTYzNTMsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3Mzk5NTU0NTMsInVzZXJJZCI6IjMifQ.1KsF2mMn_gnzrnLBXQYbsdFQU5m28Zhgfc4kT_7QvIg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": 1,\r\n    \"warehouseId\": 1,\r\n    \"vendorId\": 1,\r\n    \"quantity\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/product-mutation/add-stock",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"product-mutation",
+								"add-stock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Mutation Warehouse",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ3aEBhZG1pbi5jb20iLCJzY29wZSI6IldIX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3NDAwMzA4MjcsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3NDAwMjk5MjcsInVzZXJJZCI6IjMifQ.cSpdPL8FUqdCQJ8UoBED_3JK6IqiEFSB51LqkEGwFvQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/product-mutation/:warehouseId?start=0&length=10&field=id&order=asc&search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"product-mutation",
+								":warehouseId"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "0"
+								},
+								{
+									"key": "length",
+									"value": "10"
+								},
+								{
+									"key": "field",
+									"value": "id"
+								},
+								{
+									"key": "order",
+									"value": "asc"
+								},
+								{
+									"key": "search",
+									"value": null
+								}
+							],
+							"variable": [
+								{
+									"key": "warehouseId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Internal Mutation Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ3aEBhZG1pbi5jb20iLCJzY29wZSI6IldIX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3NDAwMjY5NjUsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3NDAwMjYwNjUsInVzZXJJZCI6IjMifQ.LfaHeUpXoLg5xVGi1MVu3Km6f9LhkCSLI7sNFbLu8Xc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\" : 1,\r\n    \"warehouseOriginId\" : 3, \r\n    \"warehouseDestinationId\" : 1,\r\n    \"quantity\" : 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/product-mutation/create-mutation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"product-mutation",
+								"create-mutation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Internal Mutation Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ3aEBhZG1pbi5jb20iLCJzY29wZSI6IldIX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3NDAwMjY5NjUsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3NDAwMjYwNjUsInVzZXJJZCI6IjMifQ.LfaHeUpXoLg5xVGi1MVu3Km6f9LhkCSLI7sNFbLu8Xc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/product-mutation/cancel/:productMutationId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"product-mutation",
+								"cancel",
+								":productMutationId"
+							],
+							"variable": [
+								{
+									"key": "productMutationId",
+									"value": "24"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reject Internal Mutation Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ3aDJAYWRtaW4uY29tIiwic2NvcGUiOiJXSF9BRE1JTiIsImltYWdlVXJsIjoiIiwiZXhwIjoxNzQwMDI3NzYyLCJ0eXBlIjoiQUNDRVNTIiwiaWF0IjoxNzQwMDI2ODYyLCJ1c2VySWQiOiI0In0.VMB7uup-WUgp1Pi_y1wZT5VtdF6YWm4FGrN21zxMCIE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/product-mutation/reject/:productMutationId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"product-mutation",
+								"reject",
+								":productMutationId"
+							],
+							"variable": [
+								{
+									"key": "productMutationId",
+									"value": "24"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Approve Internal Mutation Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ3aDJAYWRtaW4uY29tIiwic2NvcGUiOiJXSF9BRE1JTiIsImltYWdlVXJsIjoiIiwiZXhwIjoxNzQwMDM3NzIzLCJ0eXBlIjoiQUNDRVNTIiwiaWF0IjoxNzQwMDM2ODIzLCJ1c2VySWQiOiI0In0.uVF8MIBNsxIcB9GqQQnMQvN2c8pxsTA0RAhzfXKx68E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/product-mutation/approve/:productMutationId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"product-mutation",
+								"approve",
+								":productMutationId"
+							],
+							"variable": [
+								{
+									"key": "productMutationId",
+									"value": "24"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Logs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3NDAwNDMwOTcsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3NDAwNDIxOTcsInVzZXJJZCI6MX0.mljMB9PNYzyFFBh9PPewZssjEjP9TPtQUAwdvFnDawA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/product-mutation/logs/:productMutationId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"product-mutation",
+								"logs",
+								":productMutationId"
+							],
+							"variable": [
+								{
+									"key": "productMutationId",
+									"value": "24"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Auto Mutation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3NDAzNjU1NzMsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3NDAzNjQ2NzMsInVzZXJJZCI6IjEifQ.WFqtpo267iKTDBR9yXpMyJ1bzuazjHZ7EZROFGYDjL0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 5,\r\n    \"orderId\": 4,\r\n    \"warehouseId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/product-mutation/auto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"product-mutation",
+								"auto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Return Auto Mutation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3NDAzNjU1NzMsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3NDAzNjQ2NzMsInVzZXJJZCI6IjEifQ.WFqtpo267iKTDBR9yXpMyJ1bzuazjHZ7EZROFGYDjL0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/product-mutation/return/:orderId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"product-mutation",
+								"return",
+								":orderId"
+							],
+							"variable": [
+								{
+									"key": "orderId",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Total Product Stock",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3NDAzNjU1NzMsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3NDAzNjQ2NzMsInVzZXJJZCI6IjEifQ.WFqtpo267iKTDBR9yXpMyJ1bzuazjHZ7EZROFGYDjL0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/product-mutation/product/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"product-mutation",
+								"product",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
