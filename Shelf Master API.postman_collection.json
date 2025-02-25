@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "37cab0c1-bb61-4c32-bc44-2444fe889cc7",
+		"_postman_id": "a64c355d-461b-4314-8265-4f9a5f438f86",
 		"name": "Shelf Master API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "37941117"
+		"_exporter_id": "39220872"
 	},
 	"item": [
 		{
@@ -1190,6 +1190,56 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Find Closest",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ3bXMucHVyd2FkaGlrYUBnbWFpbC5jb20iLCJzY29wZSI6IlVTRVIiLCJpbWFnZVVybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0pWUHFCQ1ZZQWVoUWZxdmpmNmZsYmNYNEtxUEw1REFNbTdkeGgyVnV4Wk9RNVZZdz1zOTYtYyIsImV4cCI6MTc0MDM2NTE4MCwidHlwZSI6IkFDQ0VTUyIsImlhdCI6MTc0MDM2NDI4MCwidXNlcklkIjoxMH0.oWFkom7cyQzKNAwOn6F6B9oRqnKquo-PVKkpdPhK1Oc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/warehouse/find-closest?userAddressId=14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"warehouse",
+								"find-closest"
+							],
+							"query": [
+								{
+									"key": "userAddressId",
+									"value": "14"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -1957,6 +2007,76 @@
 									"key": "id",
 									"value": "1"
 								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Biteship",
+			"item": [
+				{
+					"name": "Get areas",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/v1/maps/areas",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"maps",
+								"areas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Couriers rate",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"origin_area_id\": \"IDNP6IDNC148IDND836IDZ12410\",\r\n  \"destination_area_id\": \"IDNP6IDNC148IDND836IDZ12430\",\r\n  \"couriers\": \"paxel,jne,sicepat,gojek,grab\",\r\n  \"items\": [\r\n    {\r\n      \"name\": \"Shoes\",\r\n      \"description\": \"Black colored size 45\",\r\n      \"value\": 199000,\r\n      \"length\": 30,\r\n      \"width\": 15,\r\n      \"height\": 20,\r\n      \"weight\": 200,\r\n      \"quantity\": 2\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/v1/rates/couriers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"rates",
+								"couriers"
 							]
 						}
 					},
