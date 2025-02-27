@@ -320,7 +320,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0M0BlbWFpbC5jb20iLCJleHAiOjE3Mzc1Mjc1MTEsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3Mzc1MjY2MTEsInVzZXJJZCI6NCwic2NvcGUiOiJVU0VSIn0.ImU_ZkQqA01vry4Js1ebQV83RxvTF374w6ddttXyi1I",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiJodHRwczovL2Nkbi5idWlsZGVyLmlvL2FwaS92MS9pbWFnZS9hc3NldHMlMkYzMGUzNjA0YzllYTI0NzgwOWMwMzUxMWU0YTljNWYzZiUyRmMzNWY1Mzc5MjI2OTRjZDM5YWU0MjYzYTUxZjZkOTZmIiwiZXhwIjoxNzQwNjM2MTcyLCJ0eXBlIjoiQUNDRVNTIiwiaWF0IjoxNzQwNjM1MjcyLCJ1c2VySWQiOjF9.rPLdW7VMWRDRJPNHby9FAoB8VIlCG6ChVc8s4dYVSic",
 									"type": "string"
 								}
 							]
@@ -329,7 +329,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"oldPassword\":\"test55\",\r\n    \"newPassword\":\"test3\"\r\n}",
+							"raw": "{\r\n    \"oldPassword\":\"admin\",\r\n    \"newPassword\":\"admina\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -337,7 +337,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/auth/change_password",
+							"raw": "http://localhost:8080/api/v1/auth/change-password",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -347,7 +347,48 @@
 								"api",
 								"v1",
 								"auth",
-								"change_password"
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Email",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjZWJvbWl0NDYxQGVudm9lcy5jb20iLCJzY29wZSI6IlVTRVIiLCJpbWFnZVVybCI6IiIsImV4cCI6MTc0MDYzODkwNiwidHlwZSI6IkFDQ0VTUyIsImlhdCI6MTc0MDYzODAwNiwidXNlcklkIjo2fQ.RdqQnyCSlF-CvljdbtNJGZLf1DrdRiFKZPsDgoqvYcM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newEmail\":\"bywijuhe@asciibinder.net\",\r\n    \"password\":\"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/auth/change-email",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"change-email"
 							]
 						}
 					},
@@ -1257,7 +1298,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3Mzc5NDU0NzYsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3Mzc5NDQ1NzYsInVzZXJJZCI6MSwic2NvcGUiOiJTVVBFUl9BRE1JTiJ9.0QGIQvpjL32neksDpvBDvKLi4RJvSJLQPhBvcu6dXD0",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3NDA1MDEyODIsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3NDA1MDAzODIsInVzZXJJZCI6MX0.YDpHRqeBadsM1biJSQHSv2dDvNHhyCkHrARS3r1IH_8",
 											"type": "string"
 										}
 									]
