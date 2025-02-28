@@ -2124,6 +2124,281 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Promotion",
+			"item": [
+				{
+					"name": "Get All Promotion",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3NDA3MjYwNjQsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3NDA3MjUxNjQsInVzZXJJZCI6MX0.AKTBIjBcWLfEBijuceqRXqkbBDmspHr4gpQLt2kU1wY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/promotion?start=0&length=10&search=&field=id&order=desc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"promotion"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "0"
+								},
+								{
+									"key": "length",
+									"value": "10"
+								},
+								{
+									"key": "search",
+									"value": ""
+								},
+								{
+									"key": "field",
+									"value": "id"
+								},
+								{
+									"key": "order",
+									"value": "desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Simple promotion (No Auth)",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/promotion/simple",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"promotion",
+								"simple"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Promotion",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3NDA3MjUzMDgsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3NDA3MjQ0MDgsInVzZXJJZCI6MX0.3FqOg9zmfXUQp9-POvdBbrsUS3zbpYElth7XGlYT7V8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"test2\",\r\n    \"description\":\"test2\",\r\n    \"imageUrl\":\"test2\",\r\n    \"productUrl\":\"test2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/promotion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"promotion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Promotion",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3NDA3MjUzMDgsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3NDA3MjQ0MDgsInVzZXJJZCI6MX0.3FqOg9zmfXUQp9-POvdBbrsUS3zbpYElth7XGlYT7V8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"test222\",\r\n    \"description\":\"test222\",\r\n    \"imageUrl\":\"test222\",\r\n    \"productUrl\":\"test222\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/promotion/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"promotion",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Promotion",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3NDA3MjUzMDgsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3NDA3MjQ0MDgsInVzZXJJZCI6MX0.3FqOg9zmfXUQp9-POvdBbrsUS3zbpYElth7XGlYT7V8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/promotion/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"promotion",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Promotion Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3NDA3MjYwNjQsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3NDA3MjUxNjQsInVzZXJJZCI6MX0.AKTBIjBcWLfEBijuceqRXqkbBDmspHr4gpQLt2kU1wY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/promotion?start=0&length=10&search=&field=id&order=desc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"promotion"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "0"
+								},
+								{
+									"key": "length",
+									"value": "10"
+								},
+								{
+									"key": "search",
+									"value": ""
+								},
+								{
+									"key": "field",
+									"value": "id"
+								},
+								{
+									"key": "order",
+									"value": "desc"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
