@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "c1eae4c5-97a2-409b-a998-08b7c741a354",
+		"_postman_id": "0777a70f-643e-4282-b8fb-6a1f18d8947d",
 		"name": "Shelf Master API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "14237237"
+		"_exporter_id": "37941117"
 	},
 	"item": [
 		{
@@ -2553,6 +2553,404 @@
 								"api",
 								"v1",
 								"cart"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Report",
+			"item": [
+				{
+					"name": "Get 3 Card Sales Status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3NDA5NjUwNTQsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3NDA5NjQxNTQsInVzZXJJZCI6MX0.IbMGKPqNcxnM4U0_0bsJG1YM728F7HSQwsMlB7j9aeU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/report/cards?date=2025-02-28&id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"report",
+								"cards"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2025-02-28"
+								},
+								{
+									"key": "id",
+									"value": "1",
+									"description": "warehouse ID can be null"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Sales Report Preview",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3NDA5NjgzNDgsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3NDA5Njc0NDgsInVzZXJJZCI6IjEifQ.FYVMAwydpJ64nOQG8uuCfoV_5Co4VmXU_0M14Ir8Yis",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/report/sales-preview?start=0&length=10&field=id&order=asc&startDate=2025-02-05&endDate=2025-03-05&warehouseId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"report",
+								"sales-preview"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "0"
+								},
+								{
+									"key": "length",
+									"value": "10"
+								},
+								{
+									"key": "field",
+									"value": "id"
+								},
+								{
+									"key": "order",
+									"value": "asc"
+								},
+								{
+									"key": "startDate",
+									"value": "2025-02-05"
+								},
+								{
+									"key": "endDate",
+									"value": "2025-03-05"
+								},
+								{
+									"key": "productId",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "categoryId",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "warehouseId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Stock Report Preview",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3NDA5NjgzNDgsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3NDA5Njc0NDgsInVzZXJJZCI6IjEifQ.FYVMAwydpJ64nOQG8uuCfoV_5Co4VmXU_0M14Ir8Yis",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/report/stock-preview?start=0&length=10&field=id&order=asc&startDate=2025-02-05&endDate=2025-03-05&warehouseId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"report",
+								"stock-preview"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "0"
+								},
+								{
+									"key": "length",
+									"value": "10"
+								},
+								{
+									"key": "field",
+									"value": "id"
+								},
+								{
+									"key": "order",
+									"value": "asc"
+								},
+								{
+									"key": "startDate",
+									"value": "2025-02-05"
+								},
+								{
+									"key": "endDate",
+									"value": "2025-03-05"
+								},
+								{
+									"key": "productId",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "warehouseId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Top 3 Sales Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3NDA5NjUwNTQsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3NDA5NjQxNTQsInVzZXJJZCI6MX0.IbMGKPqNcxnM4U0_0bsJG1YM728F7HSQwsMlB7j9aeU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/report/popular?date=2025-02-28&id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"report",
+								"popular"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2025-02-28"
+								},
+								{
+									"key": "id",
+									"value": null,
+									"description": "warehouse ID can be null"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Graph Sales in a Month",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3NDA5NjUwNTQsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3NDA5NjQxNTQsInVzZXJJZCI6MX0.IbMGKPqNcxnM4U0_0bsJG1YM728F7HSQwsMlB7j9aeU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/report/month-graph?date=2025-02-28&id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"report",
+								"month-graph"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2025-02-28"
+								},
+								{
+									"key": "id",
+									"value": null,
+									"description": "warehouse ID can be null"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Graph Sales in a Year",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3NDA5NjUwNTQsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3NDA5NjQxNTQsInVzZXJJZCI6MX0.IbMGKPqNcxnM4U0_0bsJG1YM728F7HSQwsMlB7j9aeU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/report/year-graph?date=2025-02-28&id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"report",
+								"year-graph"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2025-02-28"
+								},
+								{
+									"key": "id",
+									"value": null,
+									"description": "warehouse ID can be null"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Sales Report",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3NDA5NjgzNDgsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3NDA5Njc0NDgsInVzZXJJZCI6IjEifQ.FYVMAwydpJ64nOQG8uuCfoV_5Co4VmXU_0M14Ir8Yis",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": null,\r\n    \"categoryId\": null,\r\n    \"startDate\": \"2025-02-05\",\r\n    \"endDate\": \"2025-03-05\",\r\n    \"warehouseId\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/report/sales",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"report",
+								"sales"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Stock Report",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3NDA5NjgzNDgsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3NDA5Njc0NDgsInVzZXJJZCI6IjEifQ.FYVMAwydpJ64nOQG8uuCfoV_5Co4VmXU_0M14Ir8Yis",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": null,\r\n    \"startDate\": \"2025-02-05\",\r\n    \"endDate\": \"2025-03-05\",\r\n    \"warehouseId\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/report/stock",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"report",
+								"stock"
 							]
 						}
 					},
