@@ -2457,7 +2457,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3NDA0OTY3MDgsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3NDA0OTU4MDgsInVzZXJJZCI6MX0._5O0uok0gykTIYQksWYzMUuvwCDGdT-FuqaMDZopENg",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3NDA1ODk3OTEsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3NDA1ODg4OTEsInVzZXJJZCI6MX0.vunFAhLwHu7h1OJwpEaiQIfUgTG8PAAGkeCkOi5xG74",
 									"type": "string"
 								}
 							]
@@ -2465,7 +2465,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/cart/:userId",
+							"raw": "http://localhost:8080/api/v1/cart",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -2474,14 +2474,7 @@
 							"path": [
 								"api",
 								"v1",
-								"cart",
-								":userId"
-							],
-							"variable": [
-								{
-									"key": "userId",
-									"value": "2"
-								}
+								"cart"
 							]
 						}
 					},
@@ -2495,7 +2488,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3NDA0Njk3OTIsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3NDA0Njg4OTIsInVzZXJJZCI6MX0.ieHQAZZ3Zz1ZlAFHsYDlZmnnT9FClNHlXXy6_NvDHzs",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJzY29wZSI6IlNVUEVSX0FETUlOIiwiaW1hZ2VVcmwiOiIiLCJleHAiOjE3NDA1NjI0MjMsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3NDA1NjE1MjMsInVzZXJJZCI6MX0._9Ua3Y0OdPASwgKXwrqUrJxsghGW-l2Yf9rOeUXOuR0",
 									"type": "string"
 								}
 							]
@@ -2503,7 +2496,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/cart/:userId/:cartId",
+							"raw": "http://localhost:8080/api/v1/cart/:cartId",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -2513,17 +2506,12 @@
 								"api",
 								"v1",
 								"cart",
-								":userId",
 								":cartId"
 							],
 							"variable": [
 								{
-									"key": "userId",
-									"value": "1"
-								},
-								{
 									"key": "cartId",
-									"value": "2"
+									"value": ""
 								}
 							]
 						}
@@ -2555,7 +2543,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/cart/:userId",
+							"raw": "http://localhost:8080/api/v1/cart",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -2564,14 +2552,7 @@
 							"path": [
 								"api",
 								"v1",
-								"cart",
-								":userId"
-							],
-							"variable": [
-								{
-									"key": "userId",
-									"value": "1"
-								}
+								"cart"
 							]
 						}
 					},
